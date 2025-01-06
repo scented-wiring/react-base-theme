@@ -1,0 +1,20 @@
+.base-wrapper {
+    display: flex;
+}
+
+.base-wrapper.align-CENTER {
+    justify-content: center;
+}
+
+.base-wrapper.align-LEFT {
+    justify-content: flex-start;
+}
+
+.base-wrapper.align-RIGHT {
+    justify-content: flex-end;
+}
+
+.testClass {
+    max-width: 450px !important;
+    margin: 0;
+}

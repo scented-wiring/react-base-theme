@@ -1,0 +1,21 @@
+/* === colors === */
+{% set primary = theme.colors.primary.color %}
+{% set secondary = theme.colors.secondary.color %}
+{% set tertiary = theme.colors.tertiary.color %}
+{% set dark = theme.colors.dark.color %}
+{% set light = theme.colors.light.color %}
+{% set grey = theme.colors.grey.color %}
+{% set black = theme.colors.black.color %}
+{% set white = theme.colors.white.color %}
+
+:root {
+    /* === colors === */
+    --primary: {{ primary }};
+    --secondary: {{ secondary }};
+    --tertiary: {{ tertiary }};
+    --dark: {{ dark }};
+    --light: {{ light }};
+    --grey: {{ grey }};
+    --black: {{ black }};
+    --white: {{ white }};
+}

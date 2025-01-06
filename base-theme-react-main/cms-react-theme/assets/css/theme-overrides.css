@@ -1,0 +1,462 @@
+{###########################################################################}
+{#######################   1. Typography styling   #########################}
+{###########################################################################}
+
+{% set h1 = theme.typography.h1 %}
+{% set h2 = theme.typography.h2 %}
+{% set h3 = theme.typography.h3 %}
+{% set h4 = theme.typography.h4 %}
+{% set h5 = theme.typography.h5 %}
+{% set h6 = theme.typography.h6 %}
+{% set label = theme.typography.subheading %}
+{% set p = theme.typography.paragraph %}
+{% set p_big = theme.typography.paragraph_large %}
+{% set p_small = theme.typography.paragraph_small %}
+{% set link = theme.typography.link %}
+{% set blockquote = theme.typography.blockquote %}
+
+html {
+    font-size: 62.5%; /* makes settings rem easy eg. 16px = 1.6rem or 26px 2.6rem */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    {{ p.font.style }};
+    font-size: {{p.size_mobile.size ~ p.size_mobile.size_unit }};
+    line-height: ; {{ p.line_height }}
+    letter-spacing: {{ p.letter_spacing_mobile }}px;
+    text-transform: {{ p.transform }};
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: manual;
+}
+
+@media only screen and (min-width: 769px) {
+    body {
+        font-size: {{ p.size_desktop.size ~ p.size_desktop.size_unit }};
+        letter-spacing: {{ p.letter_spacing_desktop }}px;
+    }
+}
+
+h1, .h1 {
+    {{ h1.font.style }};
+    font-size: {{ h1.size_mobile.size ~ h1.size_mobile.size_unit }};
+    line-height: {{ h1.line_height }};
+    letter-spacing: {{ h1.letter_spacing_mobile }}px;
+    text-transform: {{ h1.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    h1, .h1 {
+        font-size: {{ h1.size_desktop.size ~ h1.size_desktop.size_unit }};
+        letter-spacing: {{ h1.letter_spacing_desktop }}px;
+    }
+}
+
+h2, .h2 {
+    {{ h2.font.style }};
+    font-size: {{ h2.size_mobile.size ~ h2.size_mobile.size_unit }};
+    line-height: {{ h2.line_height }};
+    letter-spacing: {{ h2.letter_spacing_mobile }}px;
+    text-transform: {{ h2.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    h2, .h2 {
+        font-size: {{ h2.size_desktop.size ~ h2.size_desktop.size_unit }};
+        letter-spacing: {{ h2.letter_spacing_desktop }}px;
+    }
+}
+
+h3, .h3 {
+    {{ h3.font.style }};
+    font-size: {{ h3.size_mobile.size ~ h3.size_mobile.size_unit }};
+    line-height: {{ h3.line_height }};
+    letter-spacing: {{ h3.letter_spacing_mobile }}px;
+    text-transform: {{ h3.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    h3, .h3 {
+        font-size: {{ h3.size_desktop.size ~ h3.size_desktop.size_unit }};
+        letter-spacing: {{ h3.letter_spacing_desktop }}px;
+    }
+}
+
+h4, .h4 {
+    {{ h4.font.style }};
+    font-size: {{ h4.size_mobile.size ~ h4.size_mobile.size_unit }};
+    line-height: {{ h4.line_height }};
+    letter-spacing: {{ h4.letter_spacing_mobile }}px;
+    text-transform: {{ h4.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    h4, .h4 {
+        font-size: {{ h4.size_desktop.size ~ h4.size_desktop.size_unit }};
+        letter-spacing: {{ h4.letter_spacing_desktop }}px;
+    }
+}
+
+h5, .h5 {
+    {{ h5.font.style }};
+    font-size: {{ h5.size_mobile.size ~ h5.size_mobile.size_unit }};
+    line-height: {{ h5.line_height }};
+    letter-spacing: {{ h5.letter_spacing_mobile }}px;
+    text-transform: {{ h5.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    h5, .h5 {
+        font-size: {{ h5.size_desktop.size ~ h5.size_desktop.size_unit }};
+        letter-spacing: {{ h5.letter_spacing_desktop }}px;
+    }
+}
+
+h6, .h6 {
+    {{ h6.font.style }};
+    font-size: {{ h6.size_mobile.size ~ h6.size_mobile.size_unit }};
+    line-height: {{ h6.line_height }};
+    letter-spacing: {{ h6.letter_spacing_mobile }}px;
+    text-transform: {{ h6.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    h6, .h6 {
+        font-size: {{ h6.size_desktop.size ~ h6.size_desktop.size_unit }};
+        letter-spacing: {{ h6.letter_spacing_desktop }}px;
+    }
+}
+
+.label {
+    {{ label.font.style }};
+    font-size: {{ label.size_mobile.size ~ label.size_mobile.size_unit }};
+    line-height: {{ label.line_height }};
+    letter-spacing: {{ label.letter_spacing_mobile }}px;
+    text-transform: {{ label.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    .label {
+        font-size: {{ label.size_desktop.size ~ label.size_desktop.size_unit }};
+        letter-spacing: {{ label.letter_spacing_desktop }}px;
+    }
+}
+
+p.small, .small {
+    {{ p_small.font.style }};
+    font-size: {{ p_small.size_mobile.size ~ p_small.size_mobile.size_unit }};
+    line-height: {{ p_small.line_height }};
+    letter-spacing: {{ p_small.letter_spacing_mobile }}px;
+    text-transform: {{ p_small.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    p.small, .small {
+        font-size: {{ p_small.size_desktop.size ~ p_small.size_desktop.size_unit }};
+        letter-spacing: {{ p_small.letter_spacing_desktop }}px;
+    }
+}
+
+p.big, .big {
+    {{ p_big.font.style }};
+    font-size: {{ p_big.size_mobile.size ~ p_big.size_mobile.size_unit }};
+    line-height: {{ p_big.line_height }};
+    letter-spacing: {{ p_big.letter_spacing_mobile }}px;
+    text-transform: {{ p_big.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    p.big, .big {
+        font-size: {{ p_big.size_desktop.size ~ p_big.size_desktop.size_unit }};
+        letter-spacing: {{ p_big.letter_spacing_desktop }}px;
+    }
+}
+
+a, .link {
+    {{ link.font.style }};
+    font-size: {{ link.size_mobile.size ~ link.size_mobile.size_unit }};
+    line-height: {{ link.line_height }};
+    letter-spacing: {{ link.letter_spacing_mobile }}px;
+    text-transform: {{ link.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    a, .link {
+        font-size: {{ link.size_desktop.size ~ link.size_desktop.size_unit }};
+        letter-spacing: {{ link.letter_spacing_desktop }}px;
+    }
+}
+
+blockquote, .blockquote {
+    {{ blockquote.font.style }};
+    font-size: {{ blockquote.size_mobile.size ~ blockquote.size_mobile.size_unit }};
+    line-height: {{ blockquote.line_height }};
+    letter-spacing: {{ blockquote.letter_spacing_mobile }}px;
+    text-transform: {{ blockquote.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    blockquote, .blockquote {
+        font-size: {{ blockquote.size_desktop.size ~ blockquote.size_desktop.size_unit }};
+        letter-spacing: {{ blockquote.letter_spacing_desktop }}px;
+    }
+}
+
+.body-wrapper menu,
+.body-wrapper ol,
+.body-wrapper ul {
+  list-style: revert;
+  margin: revert;
+  padding: revert;
+}
+
+{###########################################################################}
+{############################   2. Buttons   ###############################}
+{###########################################################################}
+
+{% set btn = theme.button %}
+
+.btn {
+    {{ btn.spacing.spacing.css }}
+    border: {{ btn.border.width ~ "px" }} solid;
+    border-radius: {{ btn.border.radius ~ "px" }};
+
+    {{ btn.text.font.style }};
+    font-size: {{ btn.text.size_mobile.size ~ btn.text.size_mobile.size_unit }};
+    font-weight: 400;
+    line-height: 1;
+    text-transform: {{ btn.text.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    .btn {
+        font-size: {{ btn.text.size_desktop.size ~ btn.text.size_desktop.size_unit }};
+        letter-spacing: {{ p.letter_spacing_mobile }}px;
+    }
+}
+
+.btn--1 {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.btn--1:hover {
+    background-color: var(--light);
+    border-color: var(--light);
+    color: var(--black);
+}
+
+.btn--2 {
+    background-color: var(--black);
+    border-color: var(--black);
+    color: var(--white);
+}
+
+.btn--2:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+/* Submit button */
+
+form input[type=submit],
+form .hs-button {
+    {{ btn.spacing.spacing.css }}
+    border: {{ btn.border.width ~ "px" }} solid;
+    border-radius: {{ btn.border.radius ~ "px" }};
+
+    {{ btn.text.font.style }};
+    font-size: {{ btn.text.size_mobile.size ~ btn.text.size_mobile.size_unit }};
+    font-weight: 400;
+    line-height: 1;
+    text-transform: {{ btn.text.transform }};
+}
+
+@media only screen and (min-width: 769px) {
+    form input[type=submit],
+    form .hs-button {
+        font-size: {{ btn.text.size_desktop.size ~ btn.text.size_desktop.size_unit }};
+        letter-spacing: {{ p.letter_spacing_mobile }}px;
+    }
+}
+
+form input[type=submit]:hover,
+form input[type=submit]:focus,
+form .hs-button:hover,
+form .hs-button:focus {
+    background-color: {{ form_submit_button_bg_color_hover }};
+    color: {{form_submit_button_color_hover}};
+    {{ form_submit_button_border_hover }};
+}
+
+form input[type=submit]:active,
+form .hs-button:active {
+    background-color: rgba({{ color_variant(theme.buttons.background.color.color, 40)|convert_rgb }}, {{ theme.buttons.background.color.opacity / 100 }});
+    border-color: {{ color_variant(theme.buttons.border.border.top.color, 40) }};
+}
+
+{###########################################################################}
+{##############################  3. Forms   ###############################}
+{###########################################################################}
+
+{% set form_title = theme.form.form_title %}
+{% set form_label = theme.form.form_label %}
+
+/* Form title */
+
+.form-title {
+    {{ form_title.font.style }};
+    font-size: {{ form_title.size_mobile.size ~ form_title.size_mobile.size_unit }};
+    line-height: {{ form_title.line_height }};
+    letter-spacing: {{ form_title.letter_spacing_mobile }}px;
+    text-transform: {{ form_title.transform }};
+}
+
+@media only screen and (min-width: 768px) {
+    .form-title {
+        font-size: {{ form_title.size_desktop.size ~ form_title.size_desktop.size_unit }};
+        letter-spacing: {{ form_title.letter_spacing_desktop }}px;
+    }
+}
+
+/* Labels */
+
+form label {
+    {{ form_label.font.style }};
+    font-size: {{ form_label.size_mobile.size ~ form_label.size_mobile.size_unit }};
+    line-height: {{ form_label.line_height }};
+    letter-spacing: {{ form_label.letter_spacing_mobile }}px;
+    text-transform: {{ form_label.transform }};
+}
+
+@media only screen and (min-width: 768px) {
+    form label {
+        font-size: {{ form_label.size_desktop.size ~ form_label.size_desktop.size_unit }};
+        letter-spacing: {{ form_label.letter_spacing_desktop }}px;
+    }
+}
+
+/* submitted message */
+
+form,
+.submitted-message {
+  {{ body_font.style }};
+  {{ form_border }};
+  border-top-left-radius: {{ form_top_left_corner_radius }};
+  border-top-right-radius: {{ form_top_right_corner_radius }};
+  border-bottom-left-radius: {{ form_bottom_left_corner_radius }};
+  border-bottom-right-radius: {{ form_bottom_right_corner_radius }};
+  background-color: {{ form_bg_color }};
+  {{ form_padding }};
+}
+
+/* Help text */
+form legend {
+  color: {{ form_help_text_font_color }};
+}
+
+/* Inputs */
+
+{% set form_input_bg = theme.form.input_settings.background_color.color %}
+{% set form_input_text = theme.form.input_settings.text_color.color %}
+{% set form_input_padding = theme.form.input_settings.input_padding.css %}
+{% set form_input_border_width = theme.form.input_settings.input_border.width ~ "px" %}
+{% set form_input_border_type = theme.form.input_settings.input_border.type %}
+{% set form_input_border_color = theme.form.input_settings.input_border.color.color %}
+{% set form_input_border_radius = theme.form.input_settings.input_border.radius ~ "px" %}
+
+form input[type=text],
+form input[type=search],
+form input[type=email],
+form input[type=password],
+form input[type=tel],
+form input[type=number],
+form input[type=file],
+form select,
+form textarea {
+    width: 100%;
+    {{ form_input_padding  }}
+    background-color: {{ form_input_bg }};
+    color: {{ form_input_text }};
+    border: {{ form_input_border_width }} {{ form_input_border_type }} {{ form_input_border_color  }};
+    border-radius: {{ form_input_border_radius }};
+}
+
+/* Form placeholder text */
+
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+::-moz-placeholder,
+::placeholder {
+  color: {{ form_field_placeholder_color }};
+}
+
+/* Inputs - date picker */
+
+.hs-fieldtype-date .input .hs-dateinput:before {
+  color: {{ form_field_placeholder_color }};
+}
+
+.fn-date-picker td.is-selected .pika-button {
+  background: {{ primary_color }};
+}
+
+.fn-date-picker td .pika-button:hover {
+  background-color: {{ primary_color }} !important;
+}
+
+.fn-date-picker td.is-today .pika-button {
+  color: {{ primary_color }};
+}
+
+{###########################################################################}
+{#############################   4. Tables   ###############################}
+{###########################################################################}
+
+{% set table_head_bg_color = theme.tables.header.background.color.color %}
+{% set table_head_font_color = theme.tables.header.text.color.color %}
+
+{% set table_bg_color = theme.tables.table_body.background.color.color %}
+{% set table_font_color = theme.tables.table_body.text.color.color %}
+
+{% set table_footer_bg_color = theme.tables.footer.background.color.color %}
+{% set table_footer_font_color = theme.tables.footer.text.color.color %}
+
+{% set table_cell_spacing = theme.tables.cells.spacing.spacing.css %}
+{% set table_border = theme.tables.cells.border.border.css %}
+
+/* Table */
+
+table {
+  {{ table_border }}
+  background-color: {{ table_bg_color }};
+}
+
+/* Table cells */
+
+td,
+th {
+  {{ table_border }}
+  {{ table_cell_spacing }}
+  color: {{ table_font_color }};
+}
+
+/* Table header */
+
+thead th {
+    background-color: {{ table_head_bg_color }};
+    color: {{ table_head_font_color }};
+}
+
+/* Table footer */
+
+tfoot td {
+  background-color: {{ table_footer_bg_color }};
+  color: {{ table_footer_font_color }};
+}

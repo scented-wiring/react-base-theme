@@ -1,0 +1,135 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Theme settings
+-->
+
+{% set custom_body_class = 'theme-settings-preview' %} 
+    
+    {% require_css %}
+        <style>
+        .theme-settings-preview div.hs_cos_wrapper {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        </style>
+    {% end_require_css %} 
+
+{% extends "../layouts/base.hubl.html" %} 
+
+{% block body %}
+    <section class="base-wrapper relative pb-12 pt-20 lg:pb-[90px] lg:pt-[120px] max-w-[1440px] mx-auto">
+        <div class="relative">
+            <h1 class="py-8">Colors</h1>
+            <hr class="py-8" />
+            <div class="colors grid gap-14 grid-cols-4">
+            <div class="bg-primary h-[150px]"></div>
+            <div class="bg-secondary h-[150px]"></div>
+            <div class="bg-tertiary h-[150px]"></div>
+            <div class="bg-dark h-[150px]"></div>
+            <div class="bg-light h-[150px]"></div>
+            <div class="bg-grey h-[150px]"></div>
+            </div>
+            <h1 class="py-8">Typography</h1>
+            <hr class="py-8" />
+            <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur <em>adipiscing elit</em>. Duis
+                porttitor, quam vel <strong>dignissim</strong> tincidunt, odio libero
+                porta ligula, vitae fermentum lacus libero vel risus. Aenean pulvinar
+                nisl et <a href="#">vestibulum commodo</a>. Quisque euismod tempus
+                dignissim. Quisque dictum luctus velit, eu viverra urna tristique non.
+                Vivamus at dolor tellus. Cras congue sapien non turpis dapibus, et
+                vestibulum ante ultrices. Mauris eu nisi non sapien fermentum fermentum
+                in eu odio. Fusce congue elit et tortor sagittis, sit amet auctor risus
+                sagittis.
+            </p>
+
+            <p>This line contains <sub>subscript</sub> text.</p>
+            <p>This line contains <sup>superscript</sup> text.</p>
+            <p>This line contains <code>code</code>.</p>
+            <p>This line contains <small>small</small> text.</p>
+            <p>This line contains <mark>highlighted</mark> text</p>
+            <pre><code>.preformatted-code</code></pre>
+
+            <ul>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+                <li>Unordered list item</li>
+            </ul>
+            <ol>
+                <li>First ordered list item</li>
+                <li>Second ordered list item</li>
+                <li>Third ordered list item</li>
+                <li>Fourth ordered list item</li>
+            </ol>
+
+            <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor,
+                quam vel dignissim tincidunt, odio libero porta ligula, vitae fermentum
+                lacus libero vel risus. Aenean pulvinar nisl et vestibulum commodo.
+                Quisque euismod tempus dignissim.
+            </blockquote>
+
+            <h1 class="py-8">Tables</h1>
+            <hr class="py-8" />
+            <table>
+                <thead>
+                <tr>
+                    <th>Header column one</th>
+                    <th>Header column two</th>
+                    <th>Header column three</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Row one column one</td>
+                    <td>Row one column two</td>
+                    <td>Row one column three</td>
+                </tr>
+                <tr>
+                    <td>Row two column one</td>
+                    <td>Row two column two</td>
+                    <td>Row two column three</td>
+                </tr>
+                <tr>
+                    <td>Row three column one</td>
+                    <td>Row three column two</td>
+                    <td>Row three column three</td>
+                </tr>
+                <tr>
+                    <td>Row four column one</td>
+                    <td>Row four column two</td>
+                    <td>Row four column three</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>Footer column one</td>
+                    <td>Footer column two</td>
+                    <td>Footer column three</td>
+                </tr>
+                </tfoot>
+            </table>
+            </div>
+            <h1 class="py-8">Buttons</h1>
+            <hr class="py-8" />
+            <div class="btn-group flex gap-8 flex-wrap">
+            <a href="#" class="btn btn--1 ease-in-out duration-500">
+                Click me!
+            </a>
+            </div>
+        </div>
+    </section>
+    {% module "form" title="Form" path="@hubspot/form" %}
+    <div style="height: 300px"></div>
+{% endblock body %}

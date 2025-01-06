@@ -1,0 +1,25 @@
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

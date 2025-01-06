@@ -1,0 +1,11 @@
+.hs_cos_wrapper.form-title {
+    @apply 
+    
+    mb-8
+}
+
+.field.hs-form-field {
+    @apply 
+    
+    mb-8
+}
