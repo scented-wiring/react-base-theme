@@ -27,10 +27,14 @@ export const meta = {
 }
 
 export const hublDataTemplate = `
-    {% set recent_posts = blog_recent_posts(module.blog_field, 3) %}
+    {% if module.feed_type == "latest" %}
+      {% set posts = blog_recent_posts(module.blog_field, 3) %}
+    {% else %}
+      {% set posts = [blog_popular_posts(module.blog, 3), [], "popular_past_month"] %}
+    {% endif %}
     {% set hublData = [] %}
     
-    {% for content in recent_posts %}
+    {% for content in posts %}
 
       {% set tagList = [] %}
       {% for tag in content.tag_list %}
@@ -66,5 +70,4 @@ export const hublDataTemplate = `
 
       {% do hublData.append(blogPost) %}
 
-    {% endfor %}
-`
+    {% endfor %}`

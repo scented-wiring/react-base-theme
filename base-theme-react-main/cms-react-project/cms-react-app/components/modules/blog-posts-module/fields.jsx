@@ -1,7 +1,8 @@
 // Import necessary field components and type aliases
 import {
     ModuleFields,
-    BlogField
+    BlogField,
+    ChoiceField
 } from '@hubspot/cms-components/fields';
 
 export const fields = (
@@ -12,6 +13,16 @@ export const fields = (
             label="Blog posts"
             type="blog"
             default={190509636815}
+        />
+        <ChoiceField
+            label='Feed type'
+            name='feed_type'
+            id='feed_type'
+            choices={[
+                ['Latest', 'latest'],
+                ['Most popular', 'popular']
+            ]}
+            default='latest'
         />
     </ModuleFields>
 );
